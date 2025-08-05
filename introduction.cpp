@@ -6,9 +6,19 @@ int Circle(int);
 double Andere(double);
 
 int main(){
+int sum =60;
+int count = 80;
+float average;
+
+average = float(sum) / float(count);
+cout << "The average is" << average;
+
+
     cout << "The square is" <<Square(27) <<endl;
     cout << "The cirlce is" <<Circle(30) <<endl;
     cout << "The special ecuation result is" <<Andere(2.50) <<endl;
+ 
+
 
     return 0;
 }
