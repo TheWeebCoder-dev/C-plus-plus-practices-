@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.titulo{
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     background-color: #E54F6D;
+     font-family: 'Times New Roman', Times, serif;
+     font-size: 64px;
+     color: aliceblue;
+     height: 100px;
+}
+.introduction {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto; 
+    width: 750px;
+    height:80px;
+    background-color: aliceblue;
+    border: 2px solid black; 
+    border-radius: 16px;
+}
+
+.introduction p{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    margin-left: 10px;
+}
+.Campo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #22162B;
+    width: 300px;
+    margin: 20px auto;
+    height: 50px;
+    border-radius: 16px;
+    color: white;
+}
+.Sectores{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #22162B;
+    width: 400px;
+    margin: 20px auto;
+    height: 50px;
+    border-radius: 16px;
+    color: white;
+}
+.carreras{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 20px;
+    padding: 20px;
+}
+.contenedor{
+    background-color: aliceblue;
+    border: 2px solid black; 
+    border-radius: 16px;
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.contenedor img{
+   max-width: 259px;
+  height: 194px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+.carrera-titulo{
+    background-color: #E54F6D;
+    color: white;
+    border-radius: 16px;
+    width: 280px;
+}
+.carrera-titulo h2{
+    margin-left: 24px;
+    margin-right: 10px;
+}
+.lista-oportunidades{
+    margin-top: 20px;
+    font-size: 20px;
+}
+.Perspectivas{
+      display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #22162B;
+    width: 500px;
+    margin: 20px auto;
+    height: 50px;
+    border-radius: 16px;
+    color: white;
+}

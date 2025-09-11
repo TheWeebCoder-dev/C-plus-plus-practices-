@@ -1,11 +1,14 @@
 #include <iostream>
 #include <string>
-#include <time.h>
+#include <ctime>
 
 using namespace std;
 
 int main(){
-    time_t currentTime=0;
+    time_t currentTime= time(NULL);
+char* timeString = ctime(&currentTime);
+cout << "the current time is: " << timeString;
+struct tm *localTime = localtime(&currentTime);
 
     return 0;
 }
