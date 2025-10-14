@@ -1,4 +1,4 @@
-include <iostream>
+#include <iostream>
 #include <vector>
 using namespace std;
 
@@ -11,6 +11,8 @@ vector<int> l(n);
 for(int i=0; i < n; i++){
     cin >> l[i];
 }
+
+
 
 int acumulacion = 0;
 for (int x = 0; x < n; x++)
