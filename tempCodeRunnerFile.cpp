@@ -1,27 +1,71 @@
-include <iostream>
+#include <iostream>
 #include <vector>
 using namespace std;
 
+void merge(vector<int>&arr,int left,int mid,int right){
+    int n1 = mid - left +1;
+    int n2 = right - mid;
+
+    vector<int> L(n1),R(n2);
+
+    for(int i=0; i<n1;i++){
+        L[i] = arr[left + i];
+    }
+    for(int j = 0; j<n2;j++){
+        R[j] = arr[mid + 1 + j];
+    }
+
+    int i = 0,j=0;
+    int k=left;
+
+    while (i<n1 && j<n2)
+    {
+    if(L[i] <= R[j]){
+        arr[k] = L[i];
+        i++;
+    }
+    else{
+        arr[k] = R[j];
+        j++;
+    }
+    k++;
+    }
+    
+    while (i<n1)
+    {
+     arr[k] = L[i];
+     i++;
+     k++;
+    }
+    
+    while (j < n2)
+    {
+     arr[k] = R[j];
+     j++;
+     k++;
+    }
+    
+}
+
+void Mergesort(vector<int>&arr,int left,int right){
+
+    if(left>=right){
+return;
+    }
+
+    int mid = left + (right - left)/2;
+    Mergesort(arr,left,mid);
+    Mergesort(arr,mid + 1,right);
+    merge(arr,left,mid,right);
+}
+
 int main(){
-    ios::sync_with_stdio(false);
-int n;
-cin >> n;
-vector<int> l(n);
-
-for(int i=0; i < n; i++){
-    cin >> l[i];
+vector <int> arr = {2000,333000,22000,62000};
+int n = arr.size() - 1;
+Mergesort(arr,0,n);
+for(int i = 0;i < arr.size(); i++){
+    cout<< arr[i] <<" ";
 }
+cout<< endl;
 
-int acumulacion = 0;
-for (int x = 0; x < n; x++)
-{
-    acumulacion += l[x];
-}
-
-double promedio = (double)acumulacion/n;
-
-
-cout <<promedio <<endl;
-
-return 0;
 }
